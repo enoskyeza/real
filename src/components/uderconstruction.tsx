@@ -15,7 +15,7 @@ export default function Uderconstruction() {
                            className='mb-4 mt-32 ' ></Image>
                     <p className="text-4xl font-bold text-amber-700 capitalize tracking-wide mt-8">Website under
                         maintenance</p>
-                    <p className="text-xl text-black uppercase mt-4">We'll be back soon!!</p>
+                    <p className="text-xl text-black uppercase mt-4">We&apos;ll be back soon!!</p>
                 </div>
                 <div className="w-full py-4 border-t-2 border-amber-900 bg-brand-primary">
                     <div
