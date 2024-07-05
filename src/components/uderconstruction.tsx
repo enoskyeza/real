@@ -8,7 +8,7 @@ export default function Uderconstruction() {
 
                     <div
                         className="w-full flex items-center justify-center lg:justify-start absolute top-4 lg:left-0">
-                        <Image src='/logo.jpg' alt="construction-image" width={200} height={150}
+                        <Image src='/logo.png' alt="construction-image" width={200} height={150}
                                className=''></Image>
                     </div>
                     <Image src='/construction.svg' alt="construction-image" width={500} height={500}
