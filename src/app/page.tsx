@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Underconstruction from '@/components/uderconstruction'
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
       <>
-        <Underconstruction />
+         <Navbar />
       </>
   );
 }
