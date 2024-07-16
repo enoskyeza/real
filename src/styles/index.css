@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-brand-color: #ae480bff;
+  --secondary-brand-color: #f1bb90ff;
+  --persian-orange: #ce8e68ff;
+  --white: #ffffffff;
+  --hookers-green: #70877fff;
+
+}
+
 @layer base {
   body {
     font-family: "Inter", sans-serif;
