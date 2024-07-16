@@ -1,6 +1,7 @@
 'use client'
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer"
 
 export default function ClientLayout({
   children,
@@ -11,7 +12,7 @@ export default function ClientLayout({
     <>
       <Header />
       {children}
-      {/*<Footer />*/}
+      <Footer />
       <ScrollToTop />
     </>
   );
