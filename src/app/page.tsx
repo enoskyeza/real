@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Underconstruction from '@/components/uderconstruction'
-import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
       <>
-         <Navbar />
+         {/*<Navbar />*/}
+          <h1 className="text-black">Welcome to Resident Architech website</h1>
       </>
   );
 }
