@@ -8,8 +8,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --dark-brand-color: #24231d;
   --primary-brand-color: #ae480bff;
-  --secondary-brand-color: #f1bb90ff;
+  --secondary-brand-color: #d9b79d;
   --persian-orange: #ce8e68ff;
   --white: #ffffffff;
   --hookers-green: #70877fff;
@@ -51,4 +52,31 @@
 
 .bg-brand-secondary {
   background: var(--secondary-brand-color);
+}
+
+.bg-brand-dark {
+  background: var(--dark-brand-color);
+}
+
+.brand-text-primary {
+  color: var(--primary-brand-color);
+}
+
+.brand-text-secondary {
+  color: var(--secondary-brand-color);
+}
+
+.brand-text-dark {
+  color: var(--dark-brand-color);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100Vh;
+}
+
+footer{
+  margin-top: auto;
+  flex: 0 1 auto;
 }

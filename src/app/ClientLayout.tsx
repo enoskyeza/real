@@ -9,11 +9,11 @@ export default function ClientLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className="main-container">
       <Header />
       {children}
       <Footer />
       <ScrollToTop />
-    </>
+    </div>
   );
 }
