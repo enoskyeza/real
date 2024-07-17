@@ -43,11 +43,11 @@ const Header = () => {
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "relative bg-brand-primary"
+            : "relative bg-brand-primary flex justify-center"
         }`}
       >
-        <div className="container px-4">
-          <div className="relative -mx-4 md:ps-8 flex items-center justify-between">
+        <div className="container">
+          <div className="relative -mx-4 md:ps-0 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
