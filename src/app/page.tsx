@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Hero from "@/components/Hero"
+import AboutSectionOne from "@/components/About/AboutSectionOne";
 
 export default function Home() {
   return (
       <>
-         {/*<Navbar />*/}
-          <h1 className="text-black">Welcome to Resident Architech website</h1>
+          <Hero />
+          <AboutSectionOne />
       </>
   );
 }

@@ -12,6 +12,7 @@
   --primary-brand-color: #ae480bff;
   --secondary-brand-color: #d9b79d;
   --persian-orange: #ce8e68ff;
+  --peach: #fecb98;
   --white: #ffffffff;
   --hookers-green: #70877fff;
 
@@ -52,6 +53,10 @@
 
 .bg-brand-secondary {
   background: var(--secondary-brand-color);
+}
+
+.bg-peach {
+  background: var(--peach);
 }
 
 .bg-brand-dark {
