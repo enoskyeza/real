@@ -40,10 +40,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
+        className={`header left-0 top-0 z-40 flex w-full items-center justify-center ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "relative bg-brand-primary flex justify-center"
+            ? "fixed z-[9999] bg-orange-900 !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+            : "relative bg-brand-primary"
         }`}
       >
         <div className="container px-4 md:px-0">
@@ -71,7 +71,7 @@ const Header = () => {
                 {/*/>*/}
               </Link>
             </div>
-            <div className="flex w-full items-center justify-center px-4">
+            <div className="flex w-full items-center justify-end px-4">
               <div>
                 <button
                   onClick={navbarToggleHandler}
