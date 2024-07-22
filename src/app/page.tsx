@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Hero from "@/components/Hero"
 import AboutSectionOne from "@/components/About/AboutSectionOne";
+import Testimonials from "@/components/Testimonials";
+import Brands from "@/components/Brands";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
       <>
           <Hero />
           <AboutSectionOne />
+          <Brands />
+          <Testimonials />
+          <Contact />
       </>
   );
 }
