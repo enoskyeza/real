@@ -3,6 +3,7 @@ import SectionTitle from "../Common/SectionTitle";
 import CategoryButtons from "./CategoryButtons";
 import ProjectCarousel from "./ProjectCarousel";
 import Link from "next/link";
+import {useState} from "react";
 
 const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
 
@@ -30,6 +31,8 @@ interface ListProps {
 }
 
 const ProjectSection = () => {
+
+    const [activeCategory, setActiveCategory] = useState("All");
 
   return (
     <section id="projects"
