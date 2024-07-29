@@ -4,12 +4,14 @@ import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Testimonials from "@/components/Testimonials";
 import Brands from "@/components/Brands";
 import Contact from "@/components/Contact";
+import ProjectSection from "@/components/Projects/ProjectSection";
 
 export default function Home() {
   return (
       <>
           <Hero />
           <AboutSectionOne />
+          <ProjectSection />
           <Brands />
           <Testimonials />
           <Contact />
