@@ -6,6 +6,23 @@ import Link from "next/link";
 
 const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
 
+const projects = [
+  {
+    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
+    subtitle: "Madi & West Nile Diocese",
+    imageUrl: "/images/projects/project-1.jpg",
+  },
+  {
+    title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
+    subtitle: "Madi & West Nile Diocese",
+    imageUrl: "/images/projects/project-2.jpg",
+  },
+  {
+    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
+    subtitle: "Madi & West Nile Diocese",
+    imageUrl: "/images/projects/project-3.jpg",
+  },
+];
 
 
 interface ListProps {
