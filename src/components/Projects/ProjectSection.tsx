@@ -55,16 +55,8 @@ const ProjectSection = () => {
             <div className="w-full px-4 lg:w-1/2 flex justify-end">
               <CategoryButtons categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
             </div>
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px]">
-                <Image
-                  src="/images/about/about-1-01.jpg"
-                  alt="about-image"
-                  fill
-                  className="max-w-full drop-shadow-three lg:mr-0"
-                />
-              </div>
-            </div>
+
+          <ProjectCarousel projects={projects} />
 
           </div>
         </div>
