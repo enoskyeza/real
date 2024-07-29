@@ -55,6 +55,7 @@ const AboutSectionOne = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
+                  subtitle="About Us"
                 title="We create and turn ideas into reality."
                 paragraph="Resident Architects is a consultancy firm registered in Kampala, Uganda which specializes
                 in Architecture, Interior design, Landscape design and Project Management. The firm was established
