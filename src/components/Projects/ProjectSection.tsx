@@ -1,6 +1,10 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import CategoryButtons from "./CategoryButtons";
+import ProjectCarousel from "./ProjectCarousel";
 import Link from "next/link";
+
+const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
 
 
 
