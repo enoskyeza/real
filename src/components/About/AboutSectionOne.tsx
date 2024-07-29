@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import Link from "next/link";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -36,19 +37,20 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="relative mx-auto aspect-[25/24] max-w-[500px]">
+                <div className="absolute border-8 border-amber-700 top-8 left-8 w-full h-full  hidden lg:block"> </div>
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/about/about-1-01.jpg"
                   alt="about-image"
                   fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  className="max-w-full drop-shadow-three lg:mr-0"
                 />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
+                {/*<Image*/}
+                {/*  src="/images/about/about-image-dark.svg"*/}
+                {/*  alt="about-image"*/}
+                {/*  fill*/}
+                {/*  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"*/}
+                {/*/>*/}
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2">
@@ -60,25 +62,12 @@ const AboutSectionOne = () => {
                 mb="44px"
               />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
+              <Link
+                href="https://github.com/NextJSTemplates/startup-nextjs"
+                className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"
               >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Architectural design" />
-                    <List text="Project management" />
-                    <List text="Interior design" />
-                    <List text="Landscape design" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Urban design & Urban planning" />
-                    <List text="Build cost Engineering" />
-                    <List text="Property Valuation." />
-                  </div>
-                </div>
-              </div>
+                View Our Work
+              </Link>
             </div>
 
           </div>
@@ -89,3 +78,27 @@ const AboutSectionOne = () => {
 };
 
 export default AboutSectionOne;
+
+
+
+
+
+              // <div
+              //   className="mb-12 max-w-[570px] lg:mb-0"
+              //   data-wow-delay=".15s"
+              // >
+              //   <div className="mx-[-12px] flex flex-wrap">
+              //     <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+              //       <List text="Architectural design" />
+              //       <List text="Project management" />
+              //       <List text="Interior design" />
+              //       <List text="Landscape design" />
+              //     </div>
+              //
+              //     <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+              //       <List text="Urban design & Urban planning" />
+              //       <List text="Build cost Engineering" />
+              //       <List text="Property Valuation." />
+              //     </div>
+              //   </div>
+              // </div>
