@@ -51,13 +51,13 @@ const ProjectSection = () => {
                 mb="44px"
               />
             </div>
-
             <div className="w-full px-4 lg:w-1/2 flex justify-end">
               <CategoryButtons categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
             </div>
 
-          <ProjectCarousel projects={projects} />
-
+            <div className="w-full px-4 bg-orange-900 pt-8 pb-8">
+              <ProjectCarousel projects={projects} />
+            </div>
           </div>
         </div>
       </div>
