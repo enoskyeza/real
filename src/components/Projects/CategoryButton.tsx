@@ -1,6 +1,12 @@
 import React from "react";
 
-const CategoryButtons = ({ categories, activeCategory, setActiveCategory }) => {
+interface CategoryButtonsProps {
+  categories: string[];
+  activeCategory: string;
+  setActiveCategory: (category: string) => void;
+}
+
+const CategoryButtons: React.FC<CategoryButtonsProps> = ({ categories, activeCategory, setActiveCategory }) => {
   return (
     <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">
       {categories.map((category) => (
