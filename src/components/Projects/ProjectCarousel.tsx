@@ -1,9 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-const ProjectCarousel = ({ projects }) => {
+interface Project {
+  title: string;
+  subtitle: string;
+  imageUrl: string
+}
+
+interface ProjectCarouselProps {
+  projects: Project[];
+}
+
+const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
   return (
-    <div className="-mx-4 flex flex-wrap items-center justify-center">
+    <div className="flex flex-wrap items-center justify-center">
       {projects.map((project, index) => (
         <div key={index} className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div className="relative mx-auto max-w-[500px]">
