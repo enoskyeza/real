@@ -1,58 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 const slideWidth = 30;
 
-interface Player {
+interface Project {
   title: string;
-  desc: string;
-  image: string;
+  subtitle: string;
+  imageUrl: string;
 }
 
-interface Item {
-  player: Player;
+interface ProjectItem {
+  project: Project;
 }
-
-const _items: Item[] = [
-  {
-    player: {
-      title: 'Efren Reyes',
-      desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around player of all time.',
-      image: 'https://i.postimg.cc/RhYnBf5m/er-slider.jpg',
-    },
-  },
-  {
-    player: {
-      title: "Ronnie O'Sullivan",
-      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
-      image: 'https://i.postimg.cc/qBGQNc37/ro-slider.jpg',
-    },
-  },
-  {
-    player: {
-      title: 'Shane Van Boening',
-      desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
-      image: 'https://i.postimg.cc/cHdMJQKG/svb-slider.jpg',
-    },
-  },
-  {
-    player: {
-      title: 'Mike Sigel',
-      desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
-      image: 'https://i.postimg.cc/C12h7nZn/ms-1.jpg',
-    },
-  },
-  {
-    player: {
-      title: 'Willie Mosconi',
-      desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
-      image: 'https://i.postimg.cc/NfzMDVHP/willie-mosconi-slider.jpg',
-    },
-  },
-];
-
-const length = _items.length;
-_items.push(..._items);
 
 const sleep = (ms = 0) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -66,16 +25,18 @@ interface ItemStyles {
 
 interface CarouselItem {
   styles: ItemStyles;
-  player: Player;
+  project: Project;
 }
 
-const createItem = (position: number, idx: number): CarouselItem => {
+const createItem = (position: number, idx: number, projects: ProjectItem[]): CarouselItem => {
   const item: CarouselItem = {
     styles: {
       transform: `translateX(${position * slideWidth}rem)`,
     },
-    player: _items[idx].player,
+    project: projects[idx].project,
   };
+
+  const length = projects.length;
 
   switch (position) {
     case length - 1:
@@ -95,37 +56,45 @@ const createItem = (position: number, idx: number): CarouselItem => {
 interface CarouselSlideItemProps {
   pos: number;
   idx: number;
-  activeIdx: number;
+  projects: ProjectItem[];
 }
 
-const CarouselSlideItem: React.FC<CarouselSlideItemProps> = ({ pos, idx }) => {
-  const item = createItem(pos, idx);
+const CarouselSlideItem: React.FC<CarouselSlideItemProps> = ({ pos, idx, projects }) => {
+  const item = createItem(pos, idx, projects);
 
   return (
     <li className="carousel__slide-item" style={item.styles}>
       <div className="carousel__slide-item-img-link">
-        <img src={item.player.image} alt={item.player.title} />
+        <img src={item.project.imageUrl} alt={item.project.title} />
       </div>
       <div className="carousel-slide-item__body">
-        <h4>{item.player.title}</h4>
-        <p>{item.player.desc}</p>
+        <h4>{item.project.title}</h4>
+        <p>{item.project.subtitle}</p>
       </div>
     </li>
   );
 };
 
-const keys = Array.from(Array(_items.length).keys());
+interface CarouselProps {
+  projects: Project[];
+}
 
-const Carousel: React.FC = () => {
-  const [items, setItems] = useState<number[]>(keys);
+const Carousel: React.FC<CarouselProps> = ({ projects }) => {
+  const items = projects.map((project) => ({ project }));
+  const length = items.length;
+  items.push(...items);
+
+  const keys = Array.from(Array(items.length).keys());
+
+  const [carouselItems, setCarouselItems] = useState<number[]>(keys);
   const [isTicking, setIsTicking] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
-  const bigLength = items.length;
+  const bigLength = carouselItems.length;
 
   const prevClick = (jump = 1) => {
     if (!isTicking) {
       setIsTicking(true);
-      setItems((prev) => {
+      setCarouselItems((prev) => {
         return prev.map((_, i) => prev[(i + jump) % bigLength]);
       });
     }
@@ -134,7 +103,7 @@ const Carousel: React.FC = () => {
   const nextClick = (jump = 1) => {
     if (!isTicking) {
       setIsTicking(true);
-      setItems((prev) => {
+      setCarouselItems((prev) => {
         return prev.map((_, i) => prev[(i - jump + bigLength) % bigLength]);
       });
     }
@@ -150,8 +119,8 @@ const Carousel: React.FC = () => {
   }, [isTicking]);
 
   useEffect(() => {
-    setActiveIdx((length - (items[0] % length)) % length); // prettier-ignore
-  }, [items]);
+    setActiveIdx((length - (carouselItems[0] % length)) % length); // prettier-ignore
+  }, [carouselItems]);
 
   return (
     <div className="carousel__wrap">
@@ -161,8 +130,8 @@ const Carousel: React.FC = () => {
         </button>
         <div className="carousel__container">
           <ul className="carousel__slide-list">
-            {items.map((pos, i) => (
-              <CarouselSlideItem key={i} idx={i} pos={pos} activeIdx={activeIdx} />
+            {carouselItems.map((pos, i) => (
+              <CarouselSlideItem key={i} idx={i} pos={pos} projects={items} />
             ))}
           </ul>
         </div>
@@ -170,7 +139,7 @@ const Carousel: React.FC = () => {
           <i className="carousel__btn-arrow carousel__btn-arrow--right" />
         </button>
         <div className="carousel__dots">
-          {items.slice(0, length).map((pos, i) => (
+          {carouselItems.slice(0, length).map((pos, i) => (
             <button
               key={i}
               onClick={() => handleDotClick(i)}
@@ -182,7 +151,5 @@ const Carousel: React.FC = () => {
     </div>
   );
 };
-
-ReactDOM.render(<Carousel />, document.getElementById('root'));
 
 export default Carousel;
