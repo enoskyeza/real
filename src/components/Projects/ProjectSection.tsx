@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import CategoryButtons from "@/components/Projects/CategoryButton";
 import ProjectCarousel from "@/components/Projects/ProjectCarousel";
+import Carousel from "@/components/Projects/carousel";
 import Link from "next/link";
 import {useState} from "react";
 
@@ -55,8 +56,8 @@ const ProjectSection = () => {
               <CategoryButtons categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
             </div>
 
-            <div className="w-full px-4 bg-orange-900 pt-8 pb-8">
-              <ProjectCarousel projects={projects} />
+            <div className="w-full px-4 pt-8 pb-8">
+              <Carousel projects={projects} />
             </div>
           </div>
         </div>
