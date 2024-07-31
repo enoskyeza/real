@@ -6,6 +6,7 @@ import ProjectCarousel from "@/components/Projects/ProjectCarousel";
 import Carousel from "@/components/Projects/carousel";
 import Link from "next/link";
 import {useState} from "react";
+import SwiperCarousel from "@/components/Projects/SwiperCarousel";
 
 const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
 
@@ -57,7 +58,8 @@ const ProjectSection = () => {
             </div>
 
             <div className="w-full px-4 pt-8 pb-8">
-              <Carousel projects={projects} />
+              {/*<Carousel projects={projects} />*/}
+              <SwiperCarousel />
             </div>
           </div>
         </div>
