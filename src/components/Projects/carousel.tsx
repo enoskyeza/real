@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
+import '@/components/Projects/carouselStyles.css'
 
 const slideWidth = 30;
 
@@ -31,23 +32,15 @@ interface CarouselItem {
 const createItem = (position: number, idx: number, projects: ProjectItem[]): CarouselItem => {
   const item: CarouselItem = {
     styles: {
-      transform: `translateX(${position * slideWidth}rem)`,
+      transform: `translateX(${position * (slideWidth / 3)}rem)`,
     },
     project: projects[idx].project,
   };
 
   const length = projects.length;
 
-  switch (position) {
-    case length - 1:
-    case length + 1:
-      item.styles = { ...item.styles, filter: 'grayscale(1)' };
-      break;
-    case length:
-      break;
-    default:
-      item.styles = { ...item.styles, opacity: 0 };
-      break;
+  if (position >= length || position < 0) {
+    item.styles = { ...item.styles, opacity: 0 };
   }
 
   return item;
