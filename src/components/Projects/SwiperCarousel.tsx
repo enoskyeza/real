@@ -6,45 +6,49 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import '@/components/Projects/item.css'
+// import '@/components/Projects/item.css'
 
 // import SwiperCore, { Navigation, Pagination } from 'swiper';
 
 // Install Swiper modules
 // SwiperCore.use([Navigation, Pagination]);
 
-const SwiperCarousel = () => {
+interface Project {
+  title: string;
+  subtitle: string;
+  imageUrl: string;
+}
+
+interface CarouselProps {
+  projects: Project[];
+}
+
+const SwiperCarousel: React.FC<CarouselProps> = ({ projects }) => {
   return (
     <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        slidesPerView={3}
+        spaceBetween={30}
+        navigation
+        pagination={{ clickable: true }}
+        // scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+        // loop={true}
     >
-      <SwiperSlide>
-        <div className="carousel-item">
-          <img
-              className="carousel-item__img"
-              src="https://images.pexels.com/photos/708392/pexels-photo-708392.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt="people"
-          />
-          <div className="carousel-item__details">
-            <div className="controls">
-              <span className="fas fa-play-circle"></span>
-              <span className="fas fa-plus-circle"></span>
+      {projects.map((project, index) => (
+        <SwiperSlide key={index}>
+          <div className="carousel-slide-item">
+            <img src={project.imageUrl} alt={project.title} />
+            <div className="carousel-slide-item__body">
+              <h4>{project.title}</h4>
+              <p>{project.subtitle}</p>
             </div>
-            <h5 className="carousel-item__details--title">Descriptive Title</h5>
-            <h6 className="carousel-item__details--subtitle">Date and Duration</h6>
           </div>
-        </div>
-      </SwiperSlide>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
 
-export default SwiperCarousel
+export default SwiperCarousel;

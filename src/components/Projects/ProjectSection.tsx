@@ -14,17 +14,27 @@ const projects = [
   {
     title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
     subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-1.jpg",
+    imageUrl: "/images/projects/project-01.jpg",
   },
   {
     title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
     subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-2.jpg",
+    imageUrl: "/images/projects/project-02.jpg",
   },
   {
     title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
     subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-3.jpg",
+    imageUrl: "/images/projects/project-03.jpg",
+  },
+  {
+    title: "Proposed Commercial Development on Namugongo Road",
+    subtitle: "Madi & West Nile Diocese",
+    imageUrl: "/images/projects/project-03.jpg",
+  },
+  {
+    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
+    subtitle: "Madi & West Nile Diocese",
+    imageUrl: "/images/projects/project-03.jpg",
   },
 ];
 
@@ -59,7 +69,7 @@ const ProjectSection = () => {
 
             <div className="w-full px-4 pt-8 pb-8">
               {/*<Carousel projects={projects} />*/}
-              <SwiperCarousel />
+              <SwiperCarousel projects={projects} />
             </div>
           </div>
         </div>
