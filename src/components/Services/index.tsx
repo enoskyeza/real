@@ -1,6 +1,7 @@
 import { Service } from "@/types/service";
 import SectionTitle from "../Common/SectionTitle";
 import SingleService from "./SingleService";
+import "./services.css"
 
 const serviceData: Service[] = [
   {
@@ -25,19 +26,23 @@ const serviceData: Service[] = [
 
 const Services = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-orange-100 relative z-10 py-16 md:py-20 lg:py-28 flex justify-center">
-      <div className="container">
+    <section
+      className="relative z-10 flex justify-center py-16 md:py-20 lg:py-28 bg-orange-100 overflow-hidden h-25"
+      style={{ backgroundImage: `url(/images/background/bg-1.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}
+    >
+      <div className="container relative z-20">
         <SectionTitle
           title="Below are some of our services"
           subtitle="Our Services"
           paragraph=" "
           center
         />
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {serviceData.map((service) => (
-            <SingleService key={service.id} service={service} />
-          ))}
+        <div className="relative">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 -mt-20 md:-mt-28">
+            {serviceData.map((service) => (
+              <SingleService key={service.id} service={service} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
