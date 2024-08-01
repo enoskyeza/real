@@ -1,0 +1,33 @@
+.service {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-orange-100 {
+  background-color: #fde68a; /* Tailwind's bg-orange-100 */
+}
+
+.container {
+  position: relative;
+  z-index: 20;
+}
+
+.grid {
+  margin-top: -5rem; /* Adjust based on your design */
+  z-index: 30;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    margin-top: -7rem; /* Adjust based on your design */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    margin-top: -10rem; /* Adjust based on your design */
+  }
+}
