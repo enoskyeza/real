@@ -6,6 +6,7 @@ import Brands from "@/components/Brands";
 import Contact from "@/components/Contact";
 import ProjectSection from "@/components/Projects/ProjectSection";
 import Services from "@/components/Services";
+import Statistics from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -14,9 +15,10 @@ export default function Home() {
           <AboutSectionOne />
           <ProjectSection />
           <Services />
-          <Brands />
+          <Statistics />
           <Testimonials />
           <Contact />
+          <Brands />
       </>
   );
 }
