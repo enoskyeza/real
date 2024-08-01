@@ -1,42 +1,10 @@
 'use client'
+import {useState} from "react";
+import { projects, categories } from "@/components/data"
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import CategoryButtons from "@/components/Projects/CategoryButton";
-import ProjectCarousel from "@/components/Projects/ProjectCarousel";
-import Carousel from "@/components/Projects/carousel";
-import Link from "next/link";
-import {useState} from "react";
 import SwiperCarousel from "@/components/Projects/SwiperCarousel";
-
-const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
-
-const projects = [
-  {
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-01.jpg",
-  },
-  {
-    title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-02.jpg",
-  },
-  {
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-03.jpg",
-  },
-  {
-    title: "Proposed Commercial Development on Namugongo Road",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-03.jpg",
-  },
-  {
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-03.jpg",
-  },
-];
 
 
 interface ListProps {
