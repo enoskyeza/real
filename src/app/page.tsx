@@ -16,8 +16,8 @@ export default function Home() {
           <ProjectSection />
           <Services />
           <Statistics />
-          <Testimonials />
           <Contact />
+          <Testimonials />
           <Brands />
       </>
   );
