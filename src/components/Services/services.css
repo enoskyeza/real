@@ -1,33 +1,36 @@
-.service {
-  position: relative;
-}
+/* styles.css */
 
-.overflow-hidden {
+.background-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
   overflow: hidden;
 }
 
-.bg-orange-100 {
-  background-color: #fde68a; /* Tailwind's bg-orange-100 */
+/*.background-container::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  filter: brightness(50%); !* Darkens the background image *!*/
+/*}*/
+
+.background-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 69, 19, 0.1); /* Light brown overlay with 50% opacity */
+  z-index: 1;
 }
 
-.container {
+.content {
   position: relative;
-  z-index: 20;
-}
-
-.grid {
-  margin-top: -5rem; /* Adjust based on your design */
-  z-index: 30;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    margin-top: -7rem; /* Adjust based on your design */
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    margin-top: -10rem; /* Adjust based on your design */
-  }
+  z-index: 2;
+  /* Additional styles for your content */
 }
