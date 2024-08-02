@@ -2,6 +2,7 @@
 import { Service } from "@/types/service";
 import { Testimonial } from "@/types/testimonial";
 import { Project } from "@/types/project";
+import {Statistic} from "@/types/statistic";
 
 // Services Data
 export const services: Service[] = [
@@ -99,3 +100,10 @@ export const projects: Project[] = [
 ];
 
 export const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
+
+export const statistics: Statistic[] = [
+  { name: "Certified Engineers", number: 220 },
+  { name: "Happy Clients", number: 180 },
+  { name: "Awards Won", number: 600 },
+  { name: "Projects Done", number: 260 },
+];
