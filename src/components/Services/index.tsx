@@ -1,36 +1,32 @@
-import { Service } from "@/types/service";
+import React from 'react';
 import SectionTitle from "../Common/SectionTitle";
 import SingleService from "./SingleService";
-import "./services.css"
-
-const serviceData: Service[] = [
-  {
-    id: 1,
-    image: "/path/to/image1.jpg",
-    title: "ARCHITECTURE",
-    description: "Provides an opportunity to not only add beauty and structure to the world, but to profoundly improve the conditions for people."
-  },
-  {
-    id: 2,
-    image: "/path/to/image2.jpg",
-    title: "CONSULTING & PLANNING",
-    description: "Our team's analytical tools and user engagement activities inspire creativity and collaboration that enhance any project."
-  },
-  {
-    id: 3,
-    image: "/path/to/image3.jpg",
-    title: "CONSTRUCTION",
-    description: "Across our firm, we employ a diverse range of professionals with a successful record delivering high-quality projects."
-  }
-];
+import { services } from "@/components/data";
+import './services.css'; // Import the CSS file
 
 const Services = () => {
   return (
-    <section
-      className="relative z-10 flex justify-center py-16 md:py-20 lg:py-28 bg-orange-100 overflow-hidden h-25"
-      style={{ backgroundImage: `url(/images/background/bg-1.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}
-    >
-      <div className="container relative z-20">
+      <section
+        id="services"
+        className="relative pt-16 md:pt-20 lg:py-28 flex items-center justify-center"
+      >
+          <div
+              className="absolute inset-0"
+            style={{
+              backgroundImage: "url('/images/background/bg-1.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+                width: '100%',
+                height: '55%'
+            }}
+          >
+          </div>
+          <div className="absolute inset-0 bg-orange-300 opacity-80"
+            style={{
+                width: '100%',
+                height: '55%'
+            }}></div>
+      <div className="container content ">
         <SectionTitle
           title="Below are some of our services"
           subtitle="Our Services"
@@ -38,8 +34,8 @@ const Services = () => {
           center
         />
         <div className="relative">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 -mt-20 md:-mt-28">
-            {serviceData.map((service) => (
+          <div className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-6">
+            {services.map((service) => (
               <SingleService key={service.id} service={service} />
             ))}
           </div>
