@@ -17,14 +17,14 @@ const Services = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
                 width: '100%',
-                height: '55%'
+                height: '40%'
             }}
           >
           </div>
           <div className="absolute inset-0 bg-orange-300 opacity-80"
             style={{
                 width: '100%',
-                height: '55%'
+                height: '40%'
             }}></div>
       <div className="container content ">
         <SectionTitle
@@ -34,7 +34,7 @@ const Services = () => {
           center
         />
         <div className="relative">
-          <div className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <SingleService key={service.id} service={service} />
             ))}
