@@ -8,10 +8,10 @@ export default function Uderconstruction() {
 
                     <div
                         className="w-full flex items-center justify-center lg:justify-start absolute top-4 lg:left-0">
-                        <Image src='/logo.png' alt="construction-image" width={200} height={150}
+                        <Image src='/images/logo.png' alt="construction-image" width={200} height={150}
                                className=''></Image>
                     </div>
-                    <Image src='/construction.svg' alt="construction-image" width={500} height={500}
+                    <Image src='/images/construction.svg' alt="construction-image" width={500} height={500}
                            className='mb-4 mt-32 ' ></Image>
                     <p className="text-4xl font-bold text-amber-700 capitalize tracking-wide mt-8">Website under
                         maintenance</p>
