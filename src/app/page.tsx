@@ -1,10 +1,25 @@
 import Image from "next/image";
 import Underconstruction from '@/components/uderconstruction'
+import Hero from "@/components/Hero"
+import AboutSectionOne from "@/components/About/AboutSectionOne";
+import Testimonials from "@/components/Testimonials";
+import Brands from "@/components/Brands";
+import Contact from "@/components/Contact";
+import ProjectSection from "@/components/Projects/ProjectSection";
+import Services from "@/components/Services";
+import Statistics from "@/components/Stats";
 
 export default function Home() {
   return (
       <>
-        <Underconstruction />
+          <Hero />
+          <AboutSectionOne />
+          <ProjectSection />
+          <Services />
+          <Statistics />
+          <Contact />
+          <Testimonials />
+          <Brands />
       </>
   );
 }

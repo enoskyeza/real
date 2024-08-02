@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/index.css";
+import ClientLayout from "@/app/ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
   description: "Resident Architects Limited, based in Kampala, Uganda, specializes in architecture, interior design, " +
       "landscape design, and project management. Established in 2013, our mission is to deliver top-quality " +
       "architectural designs and services.",
+  icons: {
+    icon:"/favicon.ico",
+  }
 };
 
 export default function RootLayout({
@@ -18,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
+      </body>
     </html>
   );
 }

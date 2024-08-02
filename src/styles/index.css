@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --dark-brand-color: #24231d;
+  --primary-brand-color: #ae480bff;
+  --secondary-brand-color: #d9b79d;
+  --persian-orange: #ce8e68ff;
+  --peach: #fecb98;
+  --white: #ffffffff;
+  --hookers-green: #70877fff;
+
+}
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
+  }
+}
+
+
+.bg-brand-primary {
+  background: var(--primary-brand-color);
+}
+
+.bg-brand-secondary {
+  background: var(--secondary-brand-color);
+}
+
+.bg-peach {
+  background: var(--peach);
+}
+
+.bg-brand-dark {
+  background: var(--dark-brand-color);
+}
+
+.brand-text-primary {
+  color: var(--primary-brand-color);
+}
+
+.brand-text-secondary {
+  color: var(--secondary-brand-color);
+}
+
+.brand-text-dark {
+  color: var(--dark-brand-color);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100Vh;
+}
+
+footer{
+  margin-top: auto;
+  flex: 0 1 auto;
+}
