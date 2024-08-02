@@ -38,9 +38,9 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px]">
-                <div className="absolute border-8 border-amber-700 top-8 left-8 w-full h-full  hidden lg:block"> </div>
+                <div className="absolute border-8 border-amber-700 top-8 left-8 w-full h-full  hidden sm:block"> </div>
                 <Image
-                  src="/images/about/about-1-01.jpg"
+                  src="/images/about/about-2-01.jpg"
                   alt="about-image"
                   fill
                   className="max-w-full drop-shadow-three lg:mr-0"
