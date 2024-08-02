@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description: "Resident Architects Limited, based in Kampala, Uganda, specializes in architecture, interior design, " +
       "landscape design, and project management. Established in 2013, our mission is to deliver top-quality " +
       "architectural designs and services.",
+  icons: {
+    icon:"/favicon.ico",
+  }
 };
 
 export default function RootLayout({
