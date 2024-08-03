@@ -19,7 +19,7 @@ const ProjectSection = () => {
     <section id="projects"
              className="pt-16 md:pt-20 lg:pt-28 flex items-center justify-center"
     >
-      <div className="container">
+      <div className="container custom-container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-start">
 
