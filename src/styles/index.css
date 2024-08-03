@@ -96,21 +96,9 @@ footer{
   margin-left: auto;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 576px) {
   .custom-container {
-    max-width: 1320px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .custom-container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-container {
-    max-width: 960px;
+    max-width: 540px;
   }
 }
 
@@ -120,8 +108,20 @@ footer{
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .custom-container {
-    max-width: 540px;
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .custom-container {
+    max-width: 1320px;
   }
 }
