@@ -30,7 +30,7 @@ const Statistics = () => {
                 height: '100%'
             }}></div>
 
-        <div className="z-10 container grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
+        <div className="z-10 container custom-container grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
           <div className="flex items-center text-white">
             <div className="flex items-center gap-6">
               <div className="border-8 border-orange-500 p-6 flex flex-col items-center">
