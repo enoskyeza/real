@@ -46,7 +46,7 @@ const Header = () => {
             : "relative bg-brand-primary"
         }`}
       >
-        <div className="container px-4 md:px-0">
+        <div className="container custom-container px-4 md:px-0">
           <div className="relative -mx-4 md:ps-0 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
