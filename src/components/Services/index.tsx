@@ -26,7 +26,7 @@ const Services = () => {
                 width: '100%',
                 height: '40%'
             }}></div>
-      <div className="container content ">
+      <div className="container custom-container content ">
         <SectionTitle
           title="Below are some of our services"
           subtitle="Our Services"
