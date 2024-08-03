@@ -107,3 +107,9 @@ footer{
     max-width: 1140px;
   }
 }
+
+@media (min-width: 992px) {
+  .custom-container {
+    max-width: 960px;
+  }
+}
