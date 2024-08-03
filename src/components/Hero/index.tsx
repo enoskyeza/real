@@ -15,7 +15,7 @@ const Hero = () => {
       >
         {/*<div className="absolute inset-0 bg-orange-100 opacity-80"></div>*/}
         {/*<div className="absolute z-0 inset-0 bg-gradient-to-r from-orange-300 to-transparent opacity-100"></div>*/}
-        <div className="container relative z-20 px-12">
+        <div className="container custom-container relative z-20 px-12">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="max-w-[600px] text-center md:text-left">
