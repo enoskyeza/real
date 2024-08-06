@@ -4,7 +4,7 @@ import { projects, categories } from "@/components/data"
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import CategoryButtons from "@/components/Projects/CategoryButton";
-import SwiperCarousel from "@/components/Projects/SwiperCarousel";
+import ProjectCarousel from "@/components/Projects/projectCarousel";
 
 
 interface ListProps {
@@ -35,9 +35,9 @@ const ProjectSection = () => {
               <CategoryButtons categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
             </div>
 
-            <div className="w-full px-4 pt-8 pb-8">
+            <div className="w-full px-4 pt-0 pb-8 ">
               {/*<Carousel projects={projects} />*/}
-              <SwiperCarousel projects={projects} />
+              <ProjectCarousel projects={projects} />
             </div>
           </div>
         </div>
