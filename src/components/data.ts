@@ -50,32 +50,31 @@ export const services: Service[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
+    title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
+    our_role: "Design And Preparation of Tender Documents.",
+    status: "Construction Is Ongoing, About 90% Complete",
     imageUrl: "/images/projects/project-01.jpg",
   },
   {
     id: 2,
-    title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
+    title: "Proposed Diocesan Golden Jubilee Office Block 2021-2024",
+    our_role: "Consultation",
+    status: "Complete",
     imageUrl: "/images/projects/project-02.jpg",
   },
   {
     id: 3,
     title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
     imageUrl: "/images/projects/project-03.jpg",
   },
   {
     id: 4,
     title: "Proposed Commercial Development on Namugongo Road",
-    subtitle: "Madi & West Nile Diocese",
     imageUrl: "/images/projects/project-03.jpg",
   },
   {
     id: 5,
     title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
     imageUrl: "/images/projects/project-03.jpg",
   },
 ];
@@ -95,8 +94,8 @@ export const statistics: Statistic[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "John Kato",
-    designation: "CEO @Kato Holdings",
+    name: "Mr Nasser Godfrey",
+    designation: "Diocese of Ma'di - West Nile",
     content:
       "Resident Architects transformed our office space with innovative designs and efficient project management. Their attention to detail and commitment to excellence is unmatched.",
     image: "/images/testimonials/testimony-01.jpg",
@@ -196,3 +195,13 @@ export const brands: Brand[] = [
     imageLight: "/images/brands/plainadmin-light.svg",
   },
 ];
+
+// emails {}
+// 'info@real.ug'
+// 'customercare@real.ug'
+// 'binen@real.ug Arch. Patrick Komakech, Managing Director, ARB reg. no. 290'
+// 'kabongej@real.ug' 'Kabonge Joseph Finance'
+// 'finance@real.ug'
+// 'birungir@real.ug' 'Birungi Ritah Ass. Finance & Admin'
+// 'okellob@real.ug' 'Benard Okello Director'
+// 'adongd@real.ug' 'Adong Deborah, Director'
