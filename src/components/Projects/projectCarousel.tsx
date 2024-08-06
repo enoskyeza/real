@@ -51,10 +51,16 @@ const ProjectCarousel: React.FC<CarouselProps> = ({ projects }) => {
               <p className="font-light text-sm">
                 <span className="brand-text-primary font-bold">Our role:</span> {project.our_role}
               </p>
-              { project.location ?? <p>{project.location}</p>}
-              <p className="font-light text-sm mb-4">
+              { project.location &&
+                  <p className="font-light text-sm mb-4 mt-2">
+                      <span className="brand-text-primary font-bold">Location:</span>{project.location}
+                  </p>
+              }
+              { project.status &&
+              <p className="font-light text-sm mb-4 mt-2">
                 <span className="brand-text-primary font-bold">Status:</span> {project.status}
               </p>
+              }
                 <div className="w-full brand-text-dark border-t border-body-color border-opacity-10 pt-2">
               <a href="#" className="transition-opacity duration-300 hover:opacity-80">More Details</a>
                 </div>
