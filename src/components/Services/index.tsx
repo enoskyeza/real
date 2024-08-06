@@ -17,24 +17,25 @@ const Services = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
                 width: '100%',
-                height: '40%'
+                height: '60%'
             }}
           >
           </div>
           <div className="absolute inset-0 bg-orange-300 opacity-80"
             style={{
                 width: '100%',
-                height: '40%'
+                height: '60%'
             }}></div>
-      <div className="container custom-container content ">
+      <div className="container custom-container content">
         <SectionTitle
           title="Below are some of our services"
           subtitle="Our Services"
           paragraph=" "
           center
+          subtitle_color="white"
         />
         <div className="relative">
-          <div className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-6">
             {services.map((service) => (
               <SingleService key={service.id} service={service} />
             ))}
