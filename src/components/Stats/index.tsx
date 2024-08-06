@@ -5,7 +5,7 @@ import React from "react";
 
 const Statistics = () => {
   return (
-    <section className="relative flex flex-col items-center pb-0 md:pb-0 lg:pb-0">
+    <section className="relative flex flex-col items-center pb-0 md:pb-0 lg:pb-0 mt-16 md:mt-0">
         <SectionTitle
           title=""
           subtitle="Mission and Achievements"
@@ -13,7 +13,7 @@ const Statistics = () => {
           center
         />
 
-      <div className="relative w-full flex flex-col items-center">
+      <div className="relative w-full flex flex-col items-center py-8">
           <div
               className="absolute inset-0 z-0"
             style={{
@@ -32,10 +32,10 @@ const Statistics = () => {
 
         <div className="z-10 container custom-container grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
           <div className="flex items-center text-white">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="border-8 border-orange-500 p-6 flex flex-col items-center">
-              <h2 className="text-6xl font-medium text-white">15</h2>
-              <p className="text-xl text-center">Years</p>
+                  <h2 className="text-6xl font-medium text-white">15</h2>
+                  <p className="text-xl text-center">Years</p>
               </div>
               <p className="text-xl mt-4">
                 The mission of Resident Architects is to be a one-stop center for ingenious, top quality architectural designs and
