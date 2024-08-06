@@ -11,11 +11,11 @@ export default function ClientLayout({
 }>) {
   return (
     <div className="main-container">
-      {/*<Header />*/}
-      {/*{children}*/}
-      {/*<Footer />*/}
-      {/*<ScrollToTop />*/}
-        <Underconstruction />
+      <Header />
+      {children}
+      <Footer />
+      <ScrollToTop />
+      {/*  <Underconstruction />*/}
     </div>
   );
 }
