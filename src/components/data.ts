@@ -54,6 +54,7 @@ export const projects: Project[] = [
     our_role: "Design And Preparation of Tender Documents.",
     status: "Construction of project is ongoing and about 90% Complete",
     imageUrl: "/images/projects/project-01.jpg",
+    category: "Institutional",
   },
   {
     id: 2,
@@ -61,6 +62,7 @@ export const projects: Project[] = [
     our_role: "Consultation by Resident Architects Limited, alongside Dolphin Engineering Consults Ltd.",
     status: "Construction of the project commenced in 2022, and is still ongoing.",
     imageUrl: "/images/projects/project-02.jpg",
+    category: "Institutional",
   },
   {
     id: 3,
@@ -68,6 +70,7 @@ export const projects: Project[] = [
     location: "Sonde Goma Division-Mukono Municipal Council",
     our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
     imageUrl: "/images/projects/project-03.jpg",
+    category: "Commercial",
   },
   {
     id: 4,
@@ -75,10 +78,60 @@ export const projects: Project[] = [
     location: "Mbalwa, Kira Municipal Council Wakiso District",
     our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
     imageUrl: "/images/projects/project-04.jpg",
+    category: "Residential",
+  },
+  {
+    id: 5,
+    title: "Proposed Church Building",
+    location: "Ntungamo",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-05.jpg",
+    category: "Institutional",
+  },
+  {
+    id: 6,
+    title: "Proposed Residential Development",
+    location: "Kiti Matuga -Wakiso District",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-06.jpg",
+    category: "Residential",
+  },
+  {
+    id: 7,
+    title: "Interior design for a Coffee Bar",
+    location: "Kabanyolo Gayaza",
+    our_role: "Project is under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-07.jpg",
+    category: "Hospitality",
+  },
+  {
+    id: 8,
+    title: "Proposed Commercial Development On Isingiro Town Council",
+    location: "Isingiro Town Council",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-08.jpg",
+    category: "Commercial",
+  },
+  {
+    id: 9,
+    title: "Proposed Office Development",
+    location: "Arua City Council",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-09.jpg",
+    category: "Commercial",
+  },
+  {
+    id: 10,
+    title: "Proposed Classroom Development",
+    location: "Iganga",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-10.jpg",
+    category: "Commercial",
   },
 ];
 
-export const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
+export const categories = ["All", "Commercial", "Institutional", "Mixed Use Development", "Health Care",
+                                    "Hospitality", "Residential"];
 
 export const statistics: Statistic[] = [
   { name: "Certified Engineers", number: 220 },
