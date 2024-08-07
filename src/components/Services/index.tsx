@@ -67,7 +67,7 @@ const Services = () => {
 
                 <div className="relative">
                     <motion.div
-                        className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-6"
+                        className="equal-height-grid grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-6"
                         initial="hidden"
                         animate={inView ? "visible" : "hidden"}
                         variants={containerVariants}
@@ -75,7 +75,9 @@ const Services = () => {
                         {services.map((service) => (
                             <motion.div
                                 key={service.id}
-                                variants={itemVariants}>
+                                variants={itemVariants}
+                                className="service-card-item"
+                            >
                                 <SingleService service={service}/>
                             </motion.div>
                         ))}

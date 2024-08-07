@@ -5,7 +5,7 @@ const SingleService = ({ service }: { service: Service }) => {
   const { title, image, description } = service;
 
   return (
-      <div className="w-full flex flex-col bg-white rounded overflow-hidden shadow-lg p-4  duration-300 hover:shadow-one">
+      <div className="w-full h-full flex flex-col bg-white rounded overflow-hidden shadow-lg p-4  duration-300 hover:shadow-one">
         <div className="mb-2 flex items-center space-x-1">
           <Image src={image} alt={title} width={80} height={80} className="rounded-full" />
         </div>
