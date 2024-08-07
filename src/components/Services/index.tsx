@@ -6,6 +6,27 @@ import {services} from "@/components/data";
 import './services.css'; // Import the CSS file
 import {Parallax} from 'react-scroll-parallax';
 import Image from "next/image";
+import { motion } from 'framer-motion';
+
+
+const containerVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 
 const Services = () => {
     return (
