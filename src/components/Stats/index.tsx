@@ -1,7 +1,7 @@
 'use client'
 import SectionTitle from "../Common/SectionTitle";
 import SingleStatistic from "./singleStatistic";
-import {statistics} from "@/components/data";
+import { statistics } from "@/components/data";
 import {Parallax} from "react-scroll-parallax";
 import React from "react";
 import Image from "next/image";
@@ -16,16 +16,15 @@ const Statistics = () => {
                 center
             />
 
-            <div className="relative w-full flex flex-col overflow-hidden items-center py-8">
-                <div className="absolute inset-0 z-0 w-full h-full">
-                    <Parallax translateY={[-30, 30]} className="relative w-full h-full">
+            <div className="relative w-full h-full flex flex-col overflow-hidden items-center py-8" id="outer-container">
+                <div className="absolute inset-0 z-0" id="bg-container">
+                    <Parallax translateY={[-30, 30]} className="relative h-full w-full  bg-red-600" style={{ height:"600px"}}>
                         <Image
                             src="/images/background/bg-2.jpg"
                             alt="Background"
                             layout="fill"
                             objectFit="cover"
                             objectPosition="center"
-                            className="w-full h-full"
                         />
                         <div className="w-full h-full absolute inset-0 bg-brand-dark opacity-80"></div>
                     </Parallax>
