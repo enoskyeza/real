@@ -7,6 +7,7 @@ import './services.css'; // Import the CSS file
 import {Parallax} from 'react-scroll-parallax';
 import Image from "next/image";
 import {motion} from 'framer-motion';
+import {useInView} from 'react-intersection-observer';
 
 
 const containerVariants = {
@@ -23,12 +24,13 @@ const containerVariants = {
 };
 
 const itemVariants = {
-    hidden: {opacity: 0, y: 20},
-    visible: {opacity: 1, y: 0},
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-
 const Services = () => {
+    const {ref, inView} = useInView({triggerOnce: true, threshold: 0.1})
+
     return (
         <section
             id="services"
@@ -48,10 +50,10 @@ const Services = () => {
                 </Parallax>
             </div>
 
-            <div className="container custom-container content">
+            <div className="container custom-container content" ref={ref}>
                 <motion.div
                     initial="hidden"
-                    animate="visible"
+                    animate={inView ? "visible" : "hidden"}
                     variants={containerVariants}
                 >
                     <SectionTitle
@@ -67,11 +69,13 @@ const Services = () => {
                     <motion.div
                         className="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-6"
                         initial="hidden"
-                        animate="visible"
+                        animate={inView ? "visible" : "hidden"}
                         variants={containerVariants}
                     >
                         {services.map((service) => (
-                            <motion.div key={service.id} variants={itemVariants}>
+                            <motion.div
+                                key={service.id}
+                                variants={itemVariants}>
                                 <SingleService service={service}/>
                             </motion.div>
                         ))}
