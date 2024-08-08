@@ -41,9 +41,8 @@ const Services = () => {
                     <Image
                         src="/images/background/bg-1.jpg"
                         alt="Background"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: 'center'}}
                         className="w-full h-full"
                     />
                     <div className="absolute inset-0 bg-orange-300 opacity-80"></div>
