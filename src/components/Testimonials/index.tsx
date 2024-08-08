@@ -1,6 +1,8 @@
 import { testimonials } from "@/components/data";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 
 
 const Testimonials = () => {
