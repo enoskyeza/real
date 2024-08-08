@@ -36,12 +36,19 @@ const Testimonials = () => {
             className="dark:bg-bg-color-dark bg-orange-100 relative z-10 py-16 md:py-20 lg:py-28 flex justify-center"
             ref={ref}>
             <div className="container custom-container">
+
+                <motion.div
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    variants={containerVariants}
+                >
                 <SectionTitle
                     title="What Our Clients Say"
                     subtitle="Testimonials"
                     paragraph="We have worked on a number of projects and below is what some of our clients say about our services."
                     center
                 />
+                </motion.div>
 
                 <motion.div
                     className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3"
