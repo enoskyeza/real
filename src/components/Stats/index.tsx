@@ -22,9 +22,8 @@ const Statistics = () => {
                         <Image
                             src="/images/background/bg-2.jpg"
                             alt="Background"
-                            layout="fill"
-                            objectFit="cover"
-                            objectPosition="center"
+                            fill
+                            style={{ objectFit: 'cover', objectPosition: 'center'}}
                         />
                         <div className="w-full h-full absolute inset-0 bg-brand-dark opacity-80"></div>
                     </Parallax>
