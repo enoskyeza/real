@@ -235,7 +235,7 @@ export const brands: Brand[] = [
   {
     id: 4,
     name: "Tailadmin",
-    href: "https://tailadmin.com",
+    href: "#",
     image: "/images/brands/tailadmin.svg",
     imageLight: "/images/brands/tailadmin-light.svg",
   },
