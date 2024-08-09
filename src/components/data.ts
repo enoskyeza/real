@@ -221,7 +221,7 @@ export const brands: Brand[] = [
   {
     id: 2,
     name: "Tailgrids",
-    href: "https://tailgrids.com",
+    href: "#",
     image: "/images/brands/tailgrids.svg",
     imageLight: "/images/brands/tailgrids-light.svg",
   },
