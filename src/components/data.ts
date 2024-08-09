@@ -207,7 +207,7 @@ export const brands: Brand[] = [
   {
     id: 6,
     name: "Formbold",
-    href: "https://formbold.com",
+    href: "#",
     image: "/images/brands/formbold.svg",
     imageLight: "/images/brands/formbold-light.svg",
   },
