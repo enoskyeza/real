@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import {Parallax} from "react-scroll-parallax";
+import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,8 +11,18 @@ const Footer = () => {
     <>
       <footer className="relative z-10 pt-16 md:pt-10 lg:pt-12 flex justify-center ">
         <div className="container custom-container">
-          <div className="-mx-4 flex flex-wrap bg-brand-dark p-8">
-            <div className="w-full lg:pe-12 md:w-1/2 lg:w-4/12 xl:w-5/12">
+          <div className="relative -mx-4 flex flex-wrap bg-brand-dark p-8">
+            <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+                    <Image
+                        src="/images/footer/bg-01.jpg"
+                        alt="Background"
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: 'center', opacity:'30%'}}
+                        className="w-full h-full"
+                    />
+            </div>
+
+            <div className="w-full lg:pe-12 md:w-1/2 lg:w-4/12 xl:w-5/12 z-10">
               <div className="mb-0 max-w-[360px] lg:mb-0">
                 <Link href="/" className="mb-4 inline-block">
                   <Image
@@ -28,7 +40,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12 z-10">
               <div className="mb-0 lg:mb-0">
                 <h2 className="mb-10 text-xl font-bold text-white">
                   Useful Links
@@ -39,7 +51,7 @@ const Footer = () => {
                       href="/blog"
                       className="mb-4 inline-block text-base brand-text-secondary duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Blog
+                      About
                     </Link>
                   </li>
                   <li>
@@ -47,7 +59,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base brand-text-secondary duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Pricing
+                      Services
                     </Link>
                   </li>
                   <li>
@@ -55,17 +67,17 @@ const Footer = () => {
                       href="/about"
                       className="mb-4 inline-block text-base brand-text-secondary duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      About
+                      Blog
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12 z-10">
               <div className="mb-0 lg:mb-0">
                 <h2 className="mb-10 text-xl font-bold text-white">
-                  Terms
+                  Privacy Policy
                 </h2>
                 <ul>
                   <li>
@@ -81,7 +93,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base brand-text-secondary duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Privacy Policy
+                      Terms & Conditions
                     </Link>
                   </li>
                   <li>
@@ -89,14 +101,14 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base brand-text-secondary duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Refund Policy
+                      Career
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12 z-10">
               <div className="mb-0 lg:mb-0">
                 <h2 className="mb-10 text-xl font-bold text-white">
                   Support & Help
