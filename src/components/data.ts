@@ -214,7 +214,7 @@ export const brands: Brand[] = [
   {
     id: 1,
     name: "UIdeck",
-    href: "https://uideck.com",
+    href: "#",
     image: "/images/brands/uideck.svg",
     imageLight: "/images/brands/uideck-light.svg",
   },
