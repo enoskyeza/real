@@ -242,7 +242,7 @@ export const brands: Brand[] = [
   {
     id: 5,
     name: "PlainAdmin",
-    href: "https://plainadmin.com",
+    href: "#",
     image: "/images/brands/plainadmin.svg",
     imageLight: "/images/brands/plainadmin-light.svg",
   },
