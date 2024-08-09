@@ -228,7 +228,7 @@ export const brands: Brand[] = [
   {
     id: 3,
     name: "Lineicons",
-    href: "https://lineicons.com",
+    href: "#",
     image: "/images/brands/lineicons.svg",
     imageLight: "/images/brands/lineicons-light.svg",
   },
