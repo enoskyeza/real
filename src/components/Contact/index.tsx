@@ -4,7 +4,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden pb-16 md:pb-20 lg:pb-28 flex justify-center">
-      <div className="container">
+      <div className="container custom-container">
         <div className="-mx-4 flex flex-wrap">
           <div className="relative w-full px-4 lg:w-5/12 xl:w-1/2">
                 <Image

@@ -5,6 +5,7 @@ const SectionTitle = ({
   width = "570px",
   center,
   mb = "50px",
+    subtitle_color = ""
 }: {
   subtitle: string
   title: string;
@@ -12,6 +13,7 @@ const SectionTitle = ({
   width?: string;
   center?: boolean;
   mb?: string;
+  subtitle_color?: string;
 }) => {
   return (
     <>
@@ -20,7 +22,7 @@ const SectionTitle = ({
         style={{ maxWidth: width, marginBottom: mb }}
       >
         {/*sm:text-4xl md:text-[45px]*/}
-        <h4 className="mb-4 text-2xl !leading-tight brand-text-primary uppercase font-light">
+        <h4 className="mb-4 text-2xl !leading-tight brand-text-primary uppercase font-light" style={{ color: subtitle_color }}>
           {subtitle}
         </h4>
         <h2 className="mb-4 text-3xl font-bold !leading-tight brand-text-dark sm:text-4xl">

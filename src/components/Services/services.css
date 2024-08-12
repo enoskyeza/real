@@ -34,3 +34,20 @@
   z-index: 2;
   /* Additional styles for your content */
 }
+
+.equal-height-grid {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+}
+
+.equal-height-grid > * {
+    display: flex;
+    flex: 1 0 100%;
+}
+
+.equal-height-grid .service-card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

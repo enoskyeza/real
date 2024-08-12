@@ -32,13 +32,13 @@ const AboutSectionOne = () => {
                backgroundPosition: "center",
              }}
     >
-      <div className="container">
+      <div className="container custom-container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px]">
-                <div className="absolute border-8 border-amber-700 top-8 left-8 w-full h-full  hidden sm:block"> </div>
+              <div className="relative mx-auto aspect-[25/24] max-w-[500px] mb-8 md:mb-0">
+                <div className="absolute border-8 border-amber-700 top-8 left-8 w-full h-full  hidden sm:block "> </div>
                 <Image
                   src="/images/about/about-2-01.jpg"
                   alt="about-image"
@@ -64,10 +64,10 @@ const AboutSectionOne = () => {
               />
 
               <Link
-                href="https://github.com/NextJSTemplates/startup-nextjs"
+                href="#"
                 className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"
               >
-                View Our Work
+                Read more
               </Link>
             </div>
 

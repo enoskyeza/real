@@ -50,37 +50,88 @@ export const services: Service[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
+    title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
+    our_role: "Design And Preparation of Tender Documents.",
+    status: "Construction of project is ongoing and about 90% Complete",
     imageUrl: "/images/projects/project-01.jpg",
+    category: "Institutional",
   },
   {
     id: 2,
-    title: "TEREGO DISTRICT LOCAL GOVERNMENT ADMINISTRATIVE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
+    title: "Proposed Diocesan Golden Jubilee Office Block 2021-2024",
+    our_role: "Consultation by Resident Architects Limited, alongside Dolphin Engineering Consults Ltd.",
+    status: "Construction of the project commenced in 2022, and is still ongoing.",
     imageUrl: "/images/projects/project-02.jpg",
+    category: "Institutional",
   },
   {
     id: 3,
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
+    title: "Proposed Commercial Development on Namugongo Road",
+    location: "Sonde Goma Division-Mukono Municipal Council",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
     imageUrl: "/images/projects/project-03.jpg",
+    category: "Commercial",
   },
   {
     id: 4,
-    title: "Proposed Commercial Development on Namugongo Road",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-03.jpg",
+    title: "Proposed Residential Apartment Development",
+    location: "Mbalwa, Kira Municipal Council Wakiso District",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-04.jpg",
+    category: "Residential",
   },
   {
     id: 5,
-    title: "DIOCESAN GOLDEN JUBILEE OFFICE BLOCK",
-    subtitle: "Madi & West Nile Diocese",
-    imageUrl: "/images/projects/project-03.jpg",
+    title: "Proposed Church Building",
+    location: "Ntungamo",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-05.jpg",
+    category: "Institutional",
+  },
+  {
+    id: 6,
+    title: "Proposed Residential Development",
+    location: "Kiti Matuga -Wakiso District",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-06.jpg",
+    category: "Residential",
+  },
+  {
+    id: 7,
+    title: "Interior design for a Coffee Bar",
+    location: "Kabanyolo Gayaza",
+    our_role: "Project is under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-07.jpg",
+    category: "Hospitality",
+  },
+  {
+    id: 8,
+    title: "Proposed Commercial Development On Isingiro Town Council",
+    location: "Isingiro Town Council",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-08.jpg",
+    category: "Commercial",
+  },
+  {
+    id: 9,
+    title: "Proposed Office Development",
+    location: "Arua City Council",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-09.jpg",
+    category: "Commercial",
+  },
+  {
+    id: 10,
+    title: "Proposed Classroom Development",
+    location: "Iganga",
+    our_role: "Project is Designed by and under supervision of Resident Architects Limited.",
+    imageUrl: "/images/projects/project-10.jpg",
+    category: "Commercial",
   },
 ];
 
-export const categories = ["All", "Commercial", "Religious", "Residential", "Interior Design"];
+export const categories = ["All", "Commercial", "Institutional", "Mixed Use Development", "Health Care",
+                                    "Hospitality", "Residential"];
 
 export const statistics: Statistic[] = [
   { name: "Certified Engineers", number: 220 },
@@ -95,8 +146,8 @@ export const statistics: Statistic[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "John Kato",
-    designation: "CEO @Kato Holdings",
+    name: "Mr Nasser Godfrey",
+    designation: "Diocese of Ma'di - West Nile",
     content:
       "Resident Architects transformed our office space with innovative designs and efficient project management. Their attention to detail and commitment to excellence is unmatched.",
     image: "/images/testimonials/testimony-01.jpg",
@@ -156,43 +207,53 @@ export const brands: Brand[] = [
   {
     id: 6,
     name: "Formbold",
-    href: "https://formbold.com",
+    href: "#",
     image: "/images/brands/formbold.svg",
     imageLight: "/images/brands/formbold-light.svg",
   },
   {
     id: 1,
     name: "UIdeck",
-    href: "https://uideck.com",
+    href: "#",
     image: "/images/brands/uideck.svg",
     imageLight: "/images/brands/uideck-light.svg",
   },
   {
     id: 2,
     name: "Tailgrids",
-    href: "https://tailgrids.com",
+    href: "#",
     image: "/images/brands/tailgrids.svg",
     imageLight: "/images/brands/tailgrids-light.svg",
   },
   {
     id: 3,
     name: "Lineicons",
-    href: "https://lineicons.com",
+    href: "#",
     image: "/images/brands/lineicons.svg",
     imageLight: "/images/brands/lineicons-light.svg",
   },
   {
     id: 4,
     name: "Tailadmin",
-    href: "https://tailadmin.com",
+    href: "#",
     image: "/images/brands/tailadmin.svg",
     imageLight: "/images/brands/tailadmin-light.svg",
   },
   {
     id: 5,
     name: "PlainAdmin",
-    href: "https://plainadmin.com",
+    href: "#",
     image: "/images/brands/plainadmin.svg",
     imageLight: "/images/brands/plainadmin-light.svg",
   },
 ];
+
+// emails {}
+// 'info@real.ug'
+// 'customercare@real.ug'
+// 'binen@real.ug Arch. Patrick Komakech, Managing Director, ARB reg. no. 290'
+// 'kabongej@real.ug' 'Kabonge Joseph Finance'
+// 'finance@real.ug'
+// 'birungir@real.ug' 'Birungi Ritah Ass. Finance & Admin'
+// 'okellob@real.ug' 'Benard Okello Director'
+// 'adongd@real.ug' 'Adong Deborah, Director'

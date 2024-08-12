@@ -15,7 +15,7 @@ const Hero = () => {
       >
         {/*<div className="absolute inset-0 bg-orange-100 opacity-80"></div>*/}
         {/*<div className="absolute z-0 inset-0 bg-gradient-to-r from-orange-300 to-transparent opacity-100"></div>*/}
-        <div className="container relative z-20 px-12">
+        <div className="container custom-container relative z-20 px-12">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="max-w-[600px] text-center md:text-left">
@@ -27,13 +27,13 @@ const Hero = () => {
                 </p>
                 <div className="flex flex-col items-center justify-center md:justify-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
+                    href="#"
                     className="rounded-sm bg-brand-dark  md:me-5 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
                     Get In Touch
                   </Link>
                   <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
+                    href="#"
                     className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"
                   >
                     View Our Work
