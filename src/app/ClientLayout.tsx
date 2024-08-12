@@ -12,13 +12,13 @@ export default function ClientLayout({
 }>) {
     return (
         <div className="main-container">
-            {/*<Header/>*/}
-            {/*<ParallaxProvider>*/}
-            {/*    {children}*/}
-            {/*</ParallaxProvider>*/}
-            {/*<Footer/>*/}
-            {/*<ScrollToTop/>*/}
-              <Underconstruction />
+            <Header/>
+            <ParallaxProvider>
+                {children}
+            </ParallaxProvider>
+            <Footer/>
+            <ScrollToTop/>
+            {/*  <Underconstruction />*/}
         </div>
     );
 }
