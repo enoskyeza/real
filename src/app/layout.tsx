@@ -1,32 +1,37 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/index.css";
-import ClientLayout from "@/app/ClientLayout";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Resident Architects Limited",
-  description: "Resident Architects Limited, based in Kampala, Uganda, specializes in architecture, interior design, " +
-      "landscape design, and project management. Established in 2013, our mission is to deliver top-quality " +
-      "architectural designs and services.",
-  icons: {
-    icon:"/favicon.ico",
-  }
-};
+  title: 'Professional Portfolio - Your Name',
+  description: 'Full-stack developer and designer creating innovative digital solutions',
+  keywords: 'developer, designer, portfolio, web development, full-stack',
+  authors: [{ name: 'Your Name' }],
+  openGraph: {
+    title: 'Professional Portfolio - Your Name',
+    description: 'Full-stack developer and designer creating innovative digital solutions',
+    type: 'website',
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <ClientLayout>
+        <Header />
+        <main className="min-h-screen">
           {children}
-        </ClientLayout>
+        </main>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }

@@ -1,137 +1,192 @@
-import Image from "next/image";
-import Underconstruction from '@/components/uderconstruction'
-import Hero from "@/components/Hero"
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import Testimonials from "@/components/Testimonials";
-import Brands from "@/components/Brands";
-import Contact from "@/components/Contact";
-import ProjectSection from "@/components/Projects/ProjectSection";
-import Services from "@/components/Services";
-import Statistics from "@/components/Stats";
+'use client'
 
-export default function Home() {
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { ArrowRight, Code, Palette, Zap, Users, Award, TrendingUp } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+
+const stats = [
+  { label: 'Projects Completed', value: '50+' },
+  { label: 'Years Experience', value: '5+' },
+  { label: 'Happy Clients', value: '30+' },
+  { label: 'Technologies', value: '20+' },
+]
+
+const features = [
+  {
+    icon: Code,
+    title: 'Full-Stack Development',
+    description: 'Building scalable web applications with modern technologies and best practices.',
+    href: '/projects'
+  },
+  {
+    icon: Palette,
+    title: 'UI/UX Design',
+    description: 'Creating beautiful, intuitive interfaces that provide exceptional user experiences.',
+    href: '/projects'
+  },
+  {
+    icon: Zap,
+    title: 'Performance Optimization',
+    description: 'Optimizing applications for speed, efficiency, and scalability.',
+    href: '/career'
+  },
+  {
+    icon: Users,
+    title: 'Team Leadership',
+    description: 'Leading development teams and mentoring junior developers.',
+    href: '/career'
+  },
+]
+
+export default function HomePage() {
   return (
-      <>
-          <Hero />
-          <AboutSectionOne />
-          <ProjectSection />
-          <Services />
-          <Statistics />
-          <Contact />
-          <Testimonials />
-          <Brands />
-      </>
-  );
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-indigo-50 via-white to-cyan-50 py-20 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mx-auto max-w-2xl text-center"
+          >
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Hi, I'm{' '}
+              <span className="gradient-text">Your Name</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Full-stack developer and designer passionate about creating innovative digital solutions 
+              that make a difference. I specialize in modern web technologies and user-centered design.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Button asChild size="lg">
+                <Link href="/projects">
+                  View My Work
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="/contact">Get In Touch</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 gap-8 md:grid-cols-4"
+          >
+            {stats.map((stat, index) => (
+              <div key={stat.label} className="text-center">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-3xl font-bold text-indigo-600 sm:text-4xl"
+                >
+                  {stat.value}
+                </motion.div>
+                <div className="mt-2 text-sm font-medium text-gray-500">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center"
+          >
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              What I Do Best
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Combining technical expertise with creative vision to deliver exceptional results.
+            </p>
+          </motion.div>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+              {features.map((feature, index) => {
+                const Icon = feature.icon
+                return (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer" asChild>
+                      <Link href={feature.href}>
+                        <CardHeader>
+                          <div className="flex items-center space-x-3">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                              <Icon className="h-6 w-6 text-white" />
+                            </div>
+                            <CardTitle className="text-xl">{feature.title}</CardTitle>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-base">
+                            {feature.description}
+                          </CardDescription>
+                        </CardContent>
+                      </Link>
+                    </Card>
+                  </motion.div>
+                )
+              })}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-indigo-600 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-2xl text-center"
+          >
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Ready to work together?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-indigo-200">
+              Let's discuss your next project and bring your ideas to life with cutting-edge technology and thoughtful design.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Button size="lg" variant="secondary" asChild>
+                <Link href="/contact">
+                  Start a Project
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-indigo-600" asChild>
+                <Link href="/career">View Resume</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
 }
-
-
-
-
-
-    // <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    //   <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-    //     <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-    //       Get started by editing&nbsp;
-    //       <code className="font-mono font-bold">src/app/page.tsx</code>
-    //     </p>
-    //     <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-    //       <a
-    //         className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-    //         href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         By{" "}
-    //         <Image
-    //           src="/vercel.svg"
-    //           alt="Vercel Logo"
-    //           className="dark:invert"
-    //           width={100}
-    //           height={24}
-    //           priority
-    //         />
-    //       </a>
-    //     </div>
-    //   </div>
-    //
-    //   <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-    //     <Image
-    //       className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-    //       src="/next.svg"
-    //       alt="Next.js Logo"
-    //       width={180}
-    //       height={37}
-    //       priority
-    //     />
-    //   </div>
-    //
-    //   <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-    //     <a
-    //       href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-    //       className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <h2 className="mb-3 text-2xl font-semibold">
-    //         Docs{" "}
-    //         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-    //           -&gt;
-    //         </span>
-    //       </h2>
-    //       <p className="m-0 max-w-[30ch] text-sm opacity-50">
-    //         Find in-depth information about Next.js features and API.
-    //       </p>
-    //     </a>
-    //
-    //     <a
-    //       href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <h2 className="mb-3 text-2xl font-semibold">
-    //         Learn{" "}
-    //         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-    //           -&gt;
-    //         </span>
-    //       </h2>
-    //       <p className="m-0 max-w-[30ch] text-sm opacity-50">
-    //         Learn about Next.js in an interactive course with&nbsp;quizzes!
-    //       </p>
-    //     </a>
-    //
-    //     <a
-    //       href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-    //       className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <h2 className="mb-3 text-2xl font-semibold">
-    //         Templates{" "}
-    //         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-    //           -&gt;
-    //         </span>
-    //       </h2>
-    //       <p className="m-0 max-w-[30ch] text-sm opacity-50">
-    //         Explore starter templates for Next.js.
-    //       </p>
-    //     </a>
-    //
-    //     <a
-    //       href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-    //       className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <h2 className="mb-3 text-2xl font-semibold">
-    //         Deploy{" "}
-    //         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-    //           -&gt;
-    //         </span>
-    //       </h2>
-    //       <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-    //         Instantly deploy your Next.js site to a shareable URL with Vercel.
-    //       </p>
-    {/*    </a>*/}
-    {/*  </div>*/}
-    {/*</main>*/}
