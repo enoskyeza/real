@@ -63,12 +63,43 @@
   background: var(--dark-brand-color);
 }
 
+
+  /* Buttons */
+.btn-primary {
+  @apply text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--primary-brand-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-brand-color);
+}
+
+.btn-secondary {
+  @apply border-2 px-6 py-3 rounded-xl font-semibold hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--peach);
+  color: var(--primary-brand-color);
+  border-color: var(--primary-brand-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--dark-brand-color);
+}
+
+
 .brand-text-primary {
   color: var(--primary-brand-color);
 }
 
 .brand-text-secondary {
   color: var(--secondary-brand-color);
+}
+
+.brand-text-peach {
+  color: var(--peach);
 }
 
 .brand-text-dark {
