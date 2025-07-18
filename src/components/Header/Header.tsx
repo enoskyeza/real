@@ -38,9 +38,9 @@ const Header = () => {
       label: 'About',
       type: 'dropdown',
       items: [
-        { label: 'About Us', path: '/about' },
+        { label: 'About Us', path: '#' },
         { label: 'Gallery', path: '/gallery' },
-        { label: 'Services', path: '/services' },
+        { label: 'Services', path: '#' },
       ],
     },
     {
@@ -48,7 +48,7 @@ const Header = () => {
       type: 'dropdown',
       items: [
         { label: 'Projects', path: '/projects' },
-        { label: 'Prototypes', path: '/prototypes' },
+        { label: 'Prototypes', path: '#' },
       ],
     },
     { label: 'Careers', path: '/careers', type: 'single' },
