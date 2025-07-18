@@ -8,17 +8,17 @@ import Image from "next/image";
 
 const Statistics = () => {
     return (
-        <section className="relative flex flex-col items-center pb-0 md:pb-0 lg:pb-0 mt-16 md:mt-0">
-            <SectionTitle
-                title=""
-                subtitle="Mission and Achievements"
-                paragraph=""
-                center
-            />
+        <section className="relative flex flex-col items-center pb-0 md:pb-0 lg:pb-0 mt-0 mb:mt-16 md:mt-0">
+            {/*<SectionTitle*/}
+            {/*    title=""*/}
+            {/*    subtitle="Mission and Achievements"*/}
+            {/*    paragraph=""*/}
+            {/*    center*/}
+            {/*/>*/}
 
             <div className="relative w-full h-full flex flex-col overflow-hidden items-center py-8" id="outer-container">
                 <div className="absolute inset-0 z-0" id="bg-container">
-                    <Parallax translateY={[-30, 30]} className="relative h-full w-full  bg-red-600" style={{ height:"600px"}}>
+                    <Parallax translateY={[-30, 30]} className="relative h-full w-full  bg-red-600" style={{ height:"800px"}}>
                         <Image
                             src="/images/background/bg-2.jpg"
                             alt="Background"

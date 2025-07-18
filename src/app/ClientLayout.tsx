@@ -1,10 +1,8 @@
 'use client'
-// import Header from "@/components/Header";
 import Header from "@/components/Header/Header"
+import Footer from "@/components/Footer/Footer"
 import ScrollToTop from "@/components/ScrollToTop";
-import Footer from "@/components/Footer"
 import {ParallaxProvider} from 'react-scroll-parallax';
-import Underconstruction from "@/components/uderconstruction"
 
 export default function ClientLayout({
                                          children,
@@ -18,7 +16,7 @@ export default function ClientLayout({
             <ParallaxProvider>
                 {children}
             </ParallaxProvider>
-            <Footer/>
+            <Footer />
             <ScrollToTop/>
             {/*  <Underconstruction />*/}
         </div>

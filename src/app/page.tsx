@@ -4,12 +4,14 @@ import Hero from "@/components/Hero"
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Testimonials from "@/components/Testimonials";
 import Brands from "@/components/Brands";
-import Contact from "@/components/Contact";
-import ProjectSection from "@/components/Projects/ProjectSection";
-import Services from "@/components/Services";
+// import Contact from "@/components/Contact";
+// import ProjectSection from "@/components/Projects/ProjectSection";
+// import Services from "@/components/Services";
 import Statistics from "@/components/Stats";
 import SketchGallery from "@/components/Projects/Sketches";
 import FeaturedProjects from "@/components/Projects/Featured";
+import FeaturedServices from "@/components/Services/Services";
+import PrototypesCTA from "@/components/Services/PrototypeCta";
 
 export default function Home() {
   return (
@@ -18,12 +20,14 @@ export default function Home() {
           <AboutSectionOne />
           <SketchGallery />
           <FeaturedProjects />
-          {/*<ProjectSection />*/}
-          <Services />
+          <PrototypesCTA />
           <Statistics />
-          <Contact />
-          <Testimonials />
-          <Brands />
+          {/*<ProjectSection />*/}
+          {/*<Services />*/}
+          <FeaturedServices />
+          {/*<Contact />*/}
+          {/*<Testimonials />*/}
+          {/*<Brands />*/}
       </>
   );
 }

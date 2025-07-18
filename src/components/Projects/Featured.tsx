@@ -10,7 +10,7 @@ const FeaturedProjects = () => {
             <div className="container custom-container mx-auto px-4">
                 <div className="mb-16">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-                        <div>
+                        <div className="mb-4 md:mb-0">
                             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
                                 Featured <span className="brand-text-primary">Projects</span>
                             </h2>
