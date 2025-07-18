@@ -62,7 +62,7 @@ const Header = () => {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-brand-primary'
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container custom-container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           {/* Brand */}
           <Link href="/" className="flex items-center space-x-3">
