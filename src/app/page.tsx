@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Underconstruction from '@/components/uderconstruction'
+// import Underconstruction from '@/components/uderconstruction'
 import Hero from "@/components/Hero"
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Testimonials from "@/components/Testimonials";
@@ -8,13 +8,17 @@ import Contact from "@/components/Contact";
 import ProjectSection from "@/components/Projects/ProjectSection";
 import Services from "@/components/Services";
 import Statistics from "@/components/Stats";
+import SketchGallery from "@/components/Projects/Sketches";
+import FeaturedProjects from "@/components/Projects/Featured";
 
 export default function Home() {
   return (
       <>
           <Hero />
           <AboutSectionOne />
-          <ProjectSection />
+          <SketchGallery />
+          <FeaturedProjects />
+          {/*<ProjectSection />*/}
           <Services />
           <Statistics />
           <Contact />
