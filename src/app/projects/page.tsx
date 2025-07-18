@@ -1,12 +1,8 @@
 import React from 'react';
 import Projects from "@/components/Projects/Projects";
 
-interface Props {
-    // Define your prop types here
-    title?: string;
-}
 
-const ProjectsPage: React.FC<Props> = ({title = "Default Title"}) => {
+const ProjectsPage = () => {
     return (
         <div>
             <Projects />
