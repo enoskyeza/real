@@ -91,6 +91,17 @@
     border-color: var(--dark-brand-color);
 }
 
+.btn-dark {
+    @apply text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--dark-brand-color);
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-brand-color);
+    border-color: var(--primary-brand-color);
+}
 
 .brand-text-primary {
     color: var(--primary-brand-color);

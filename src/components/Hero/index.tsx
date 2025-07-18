@@ -30,19 +30,25 @@ const Hero = () => {
                   From first sketch to final build, we design and deliver landmarks.
                 </p>
                 <div className="flex flex-col items-center justify-center md:justify-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="#"
-                    className="rounded-sm bg-brand-dark  md:me-5 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out
-                    hover:bg-yellow-700"
-                  >
-                    Get In Touch
-                  </Link>
-                  <Link
-                    href="#"
-                    className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"
-                  >
+                  {/*<Link*/}
+                  {/*  href="#"*/}
+                  {/*  className="rounded-sm bg-brand-dark  md:me-5 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out*/}
+                  {/*  hover:bg-yellow-700"*/}
+                  {/*>*/}
+                  {/*  Get In Touch*/}
+                  {/*</Link>*/}
+                  {/*<Link*/}
+                  {/*  href="#"*/}
+                  {/*  className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"*/}
+                  {/*>*/}
+                  {/*  View Our Work*/}
+                  {/*</Link>*/}
+                  <button className="btn-primary">
+                    Get A Quote
+                  </button>
+                  <button className="btn-dark">
                     View Our Work
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

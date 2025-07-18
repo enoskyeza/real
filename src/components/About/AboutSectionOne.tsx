@@ -63,12 +63,15 @@ const AboutSectionOne = () => {
                 mb="44px"
               />
 
-              <Link
-                href="#"
-                className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"
-              >
-                Read more
-              </Link>
+              {/*<Link*/}
+              {/*  href="#"*/}
+              {/*  className="inline-block rounded-sm bg-brand-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 hover:text-white"*/}
+              {/*>*/}
+              {/*  Read more*/}
+              {/*</Link>*/}
+                <button className="btn-primary">
+                    Read more
+                </button>
             </div>
 
           </div>
